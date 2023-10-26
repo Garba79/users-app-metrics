@@ -17,20 +17,20 @@ public class UserInRole {
 	@Column(name = "id")
 	private Integer id;
 
-	@ManyToOne
+	/* @ManyToOne
 	@JoinColumn(name = "user_id", referencedColumnName = "id")
 	private User user;
-
+ */
 	@ManyToOne
 	@JoinColumn(name = "role_id", referencedColumnName = "id")
 	private Role role;
 
-	public UserInRole() {
-	}
+	// public UserInRole() {
+	// }
 
-	public UserInRole(User user, Role role) {
+	public UserInRole(Role role) {
 		super();
-		this.user = user;
+		// this.user = user;
 		this.role = role;
 	}
 
@@ -42,13 +42,13 @@ public class UserInRole {
 		this.id = id;
 	}
 
-	public User getUser() {
-		return user;
-	}
+	// public User getUser() {
+	// 	return user;
+	// }
 
-	public void setUser(User user) {
-		this.user = user;
-	}
+	// public void setUser(User user) {
+	// 	this.user = user;
+	// }
 
 	public Role getRole() {
 		return role;

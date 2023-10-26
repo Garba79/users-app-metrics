@@ -65,7 +65,7 @@ public class UserController {
 
 	}
 
-	@PostMapping
+	@PostMapping()
 	public ResponseEntity<User> authenticate(@RequestBody User user) {
 		return new ResponseEntity<>(service.getUserByUsernameAndPassword(user.getUsername(), user.getPassword()),
 				HttpStatus.OK);

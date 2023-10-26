@@ -12,9 +12,9 @@ import com.devs4j.users.entities.UserInRole;
 @Repository
 public interface UserInRoleRepository extends CrudRepository<UserInRole, Integer> {
 
-	@Query("SELECT u.user FROM UserInRole u WHERE u.role.name=?1")
-	public List<User> findUsersByRoleName(String roleName);
+	// @Query("SELECT u.user FROM UserInRole u WHERE u.role.name=?1")
+	// public List<User> findUsersByRoleName(String roleName);
 	
-	public List<UserInRole> findByUser(User user);
+	// public List<UserInRole> findByUser(User user);
 
 }

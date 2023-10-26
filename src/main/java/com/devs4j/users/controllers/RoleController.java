@@ -30,10 +30,10 @@ public class RoleController {
 		return new ResponseEntity<List<Role>>(service.getRoles(), HttpStatus.OK);
 	}
 
-	@GetMapping("/{roleName}/users")
-	public ResponseEntity<List<User>> getUsersByRole(@PathVariable("roleName") String roleName) {
-		return new ResponseEntity<List<User>>(service.getUsersByRole(roleName), HttpStatus.OK);
-	}
+	// @GetMapping("/{roleName}/users")
+	// public ResponseEntity<List<User>> getUsersByRole(@PathVariable("roleName") String roleName) {
+	// 	return new ResponseEntity<List<User>>(service.getUsersByRole(roleName), HttpStatus.OK);
+	// }
 
 	@PostMapping
 	public ResponseEntity<Role> createRoles(@RequestBody Role role) {

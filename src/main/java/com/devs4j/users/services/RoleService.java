@@ -27,10 +27,10 @@ public class RoleService {
 
 	private static final Logger log = LoggerFactory.getLogger(RoleService.class);
 
-	public List<User> getUsersByRole(String roleName) {
-		log.info("Getting roles by name {}", roleName);
-		return inRoleRepository.findUsersByRoleName(roleName);
-	}
+	// public List<User> getUsersByRole(String roleName) {
+	// 	log.info("Getting roles by name {}", roleName);
+	// 	return inRoleRepository.findUsersByRoleName(roleName);
+	// }
 
 	@Cacheable("roles")
 	public List<Role> getRoles() {
